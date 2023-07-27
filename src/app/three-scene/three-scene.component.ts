@@ -8,14 +8,14 @@ import {
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
-
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-three-scene',
+  templateUrl: './three-scene.component.html',
+  styleUrls: ['./three-scene.component.css']
 })
-export class AppComponent implements OnInit, AfterViewInit{
+export class ThreeSceneComponent {
 
+  
   
   @ViewChild('canvas')
   private canvasRef!: ElementRef;
@@ -225,7 +225,7 @@ export class AppComponent implements OnInit, AfterViewInit{
     this.renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);
     
 
-    let component: AppComponent = this;
+    let component: ThreeSceneComponent = this;
     (function render() {
       requestAnimationFrame(render);
       //component.animateCube();
